@@ -1,7 +1,10 @@
 # rellax
 Rellax while the Camera tracks with cool parallax
 
-This module uses the Camera and Viewport API from Adventure Game Studio 3.5.0.
+<img src="https://raw.githubusercontent.com/ericoporto/rellax/master/rellax_demo.gif" alt="rellax demo" width="640px" height="360px">
+
+
+_This module uses the Camera and Viewport API from **Adventure Game Studio 3.5.0**._
 
 ### Usage
 
