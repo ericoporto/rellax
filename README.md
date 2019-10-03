@@ -1,6 +1,8 @@
 # rellax
 Rellax while the Camera tracks with cool parallax
 
+This module uses the Camera and Viewport API from Adventure Game Studio 3.5.0.
+
 ### Usage
 
 Before starting, you must create the following Custom Properties
@@ -64,3 +66,12 @@ Turns Smooth Camera tracking on or off.
 Gets whether  Smooth Camera tracking is on or off.
 
 ---
+
+### License
+
+This module is created by Érico Porto and is provided with MIT License, see [LICENSE](LICENSE) for more details.
+
+The code on this module is based on the code of Smooth Scrolling + Parallax Module
+from Alasdair Beckett, which bases his code on code from Steve McCrea.
+
+The demo game uses CC0 (Public Domain) art provided by [jetrel](https://opengameart.org/users/jetrel).
