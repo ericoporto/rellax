@@ -50,22 +50,12 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 
 struct Rellax {
-  /// Gets which character is being tracked by the Game.Camera.
-  import static Character* GetTargetCharacter();
-
-  /// Set the character to be followed by the Game.Camera.
-  import static void SetTargetCharacter(Character* target);
-
-  /// Turns Parallax on or off.
-  import static void SetParallax(bool enable);
-
-  /// Gets whether Parallax is on or off.
-  import static bool isParallaxEnabled();
-
-  /// Turns Smooth Camera tracking on or off.
-  import static void SetSmoothCam(bool enable);
-
-  /// Gets whether  Smooth Camera tracking is on or off.
-  import static bool isSmoothCamEnabled();
-
+  /// The character being tracked by the Game.Camera.
+  import static attribute Character* TargetCharacter;
+  
+  /// gets/sets whether Parallax is on or off.
+  import static attribute bool EnableParallax;
+  
+  /// gets/sets whether Smooth Camera tracking is on or off.
+  import static attribute bool EnableSmoothCam;
 };

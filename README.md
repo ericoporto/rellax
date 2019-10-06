@@ -34,39 +34,21 @@ with `Px` and `Py` 100 will be fixed on the screen despite camera movement.
 
 ---
 
-#### `static Character* Rellax.GetTargetCharacter()`
+#### `static attribute Character* TargetCharacter`
 
-Gets which character is being tracked by the Game.Camera.
-
----
-
-##### `static void Rellax.SetTargetCharacter(Character* target)`
-
-Set the character to be followed by the Game.Camera.
+The character being tracked by the Game.Camera.
 
 ---
 
-##### `static void Rellax.SetParallax(bool enable)`
+##### `static attribute bool EnableParallax`
 
-Turns Parallax on or off.
-
----
-
-##### `static bool Rellax.isParallaxEnabled()`
-
-Gets whether Parallax is on or off.
+Gets/sets whether Parallax is on or off.
 
 ---
 
-##### `static void Rellax.SetSmoothCam(bool enable)`
+##### `static attribute bool EnableSmoothCam`
 
-Turns Smooth Camera tracking on or off.
-
----
-
-##### `static bool Rellax.isSmoothCamEnabled()`
-
-Gets whether  Smooth Camera tracking is on or off.
+Gets/sets whether Smooth Camera tracking is on or off.
 
 ---
 
