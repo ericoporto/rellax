@@ -11,10 +11,8 @@ Rellax while the Camera tracks with cool parallax
 
 [hr]
 [i][b]Usage[/b][/i]
-Before starting, you must create the following Custom Properties
-in AGS Editor, for usage with Objects.
-Just click on [b][tt]Properties [...][/tt][/b] and on the [b][tt]Edit Custom Properties[/tt][/b] screen,
-click on [b][tt]Edit Schema ...[/tt][/b] button, and add the two properties below:
+Before starting, you must create the following Custom Properties in AGS Editor, for usage with Objects.
+Just click on [b][tt]Properties [...][/tt][/b] and on the [b][tt]Edit Custom Properties[/tt][/b] screen, click on [b][tt]Edit Schema ...[/tt][/b] button, and add the two properties below:
 
 - PxPos:
   - [b][tt]Name[/tt]:[/b] [tt]PxPos[/tt]
@@ -29,9 +27,9 @@ click on [b][tt]Edit Schema ...[/tt][/b] button, and add the two properties belo
   - [b][tt]Type[/tt]:[/b] [tt]Number[/tt]
   - [b][tt]Default Value[/tt]:[/b] [tt]0[/tt]
 
-The number defined on [tt]Px[/tt] or [tt]Py[/tt] will be divided by 100 and used to increase
-the scrolling. An object with [tt]Px[/tt] and [tt]Py[/tt] 0 is scrolled normally, an object
-with [tt]Px[/tt] and [tt]Py[/tt] 100 will be fixed on the screen despite camera movement.
+The number defined on [tt]Px[/tt] or [tt]Py[/tt] will be divided by 100 and used to increase the scrolling. 
+An object with [tt]Px[/tt] and [tt]Py[/tt] 0 is scrolled normally, an object with [tt]Px[/tt] and [tt]Py[/tt] 100 will be fixed on the screen despite camera movement.
+Objects with negative [tt]Px[/tt] and [tt]Py[/tt] are usually at the front, and positive values are usually at the back.
 
 [hr]
 [i][b]Scritp API[/b][/i]
