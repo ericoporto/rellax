@@ -1,0 +1,55 @@
+[size=14pt][b]rellax[/b][/size] [color=gray][b] version 0.1.0 [/b][/color]
+
+[url=https://github.com/ericoporto/rellax/releases/download/0.1.0/rellax.scm]Get Latest Release [b]rellax.scm[/b][/url] | [url=https://github.com/ericoporto/rellax]GitHub Repo[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.1.0/rellax_demo_windows.zip]Demo Windows[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.1.0/rellax_demo_linux.tar.xz]Demo Linux[/url]
+
+Rellax while the Camera tracks with cool parallax
+
+[url=https://imgur.com/nJGnylM]<img src="https://raw.githubusercontent.com/ericoporto/rellax/master/rellax_demo.gif" alt="rellax demo" width="640px" height="360px">[/url]
+
+
+[i]This module uses the Camera and Viewport API from [b]Adventure Game Studio 3.5.0[/b].[/i]
+
+[hr]
+[i][b]Usage[/b][/i]
+Before starting, you must create the following Custom Properties
+in AGS Editor, for usage with Objects.
+Just click on [b][tt]Properties [...][/tt][/b] and on the [b][tt]Edit Custom Properties[/tt][/b] screen,
+click on [b][tt]Edit Schema ...[/tt][/b] button, and add the two properties below:
+
+- PxPos:
+  - [b][tt]Name[/tt]:[/b] [tt]PxPos[/tt]
+  - [b][tt]Description[/tt]:[/b] [tt]Object's horizontal parallax[/tt]
+  - [b][tt]Type[/tt]:[/b] [tt]Number[/tt]
+  - [b][tt]Default Value[/tt]:[/b] [tt]0[/tt]
+
+
+- PyPos:
+  - [b][tt]Name[/tt]:[/b] [tt]PyPos[/tt]
+  - [b][tt]Description[/tt]:[/b] [tt]Object's vertical parallax[/tt]
+  - [b][tt]Type[/tt]:[/b] [tt]Number[/tt]
+  - [b][tt]Default Value[/tt]:[/b] [tt]0[/tt]
+
+The number defined on [tt]Px[/tt] or [tt]Py[/tt] will be divided by 100 and used to increase
+the scrolling. An object with [tt]Px[/tt] and [tt]Py[/tt] 0 is scrolled normally, an object
+with [tt]Px[/tt] and [tt]Py[/tt] 100 will be fixed on the screen despite camera movement.
+
+[hr]
+[i][b]Scritp API[/b][/i]
+
+[b][tt]static attribute Character* TargetCharacter[/tt][/b]
+The character being tracked by the Game.Camera.
+
+[b][tt]static attribute bool EnableParallax[/tt][/b]
+Gets/sets whether Parallax is on or off.
+
+[b][tt]static attribute bool EnableSmoothCam[/tt][/b]
+Gets/sets whether Smooth Camera tracking is on or off.
+
+[hr]
+[i][b]License[/b][/i]
+This module is created by eri0o is provided with MIT License, see [url=https://github.com/ericoporto/rellax/blob/master/LICENSE]LICENSE[/url] for more details.
+
+The code on this module is based on the code of Smooth Scrolling + Parallax Module
+from Alasdair Beckett, which bases his code on code from Steve McCrea.
+
+The demo game uses CC0 (Public Domain) art provided by [url=https://opengameart.org/users/jetrel]jetrel[/url].
