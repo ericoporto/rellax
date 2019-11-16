@@ -6572,7 +6572,7 @@
                 <Name>rellax</Name>
                 <Description>Rellax while the Camera tracks with cool parallax.</Description>
                 <Author>eri0o</Author>
-                <Version>0.1.1</Version>
+                <Version>0.1.2</Version>
                 <Key>1909973127</Key>
                 <IsHeader>False</IsHeader>
               </Script>
@@ -6689,7 +6689,7 @@
   <Component Name="GlobalVariables" />
   <Component Name="Scripts" />
   <Component Name="SpeechCenter">
-    <SpeechCenter Version="2.1.0.0">
+    <SpeechCenter Version="2.1.1.0">
       <Document Version="2.0.0.0">
         <Settings>
           <CustomFunctions />
