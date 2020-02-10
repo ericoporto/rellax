@@ -1,5 +1,5 @@
 // Rellax
-// 0.1.0
+// 0.1.3
 // A module to provide smooth scrolling and parallax!
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Before starting, you must create the following Custom Properties
