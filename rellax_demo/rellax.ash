@@ -66,8 +66,8 @@ struct Rellax {
   import static attribute int CameraOffsetY;
       
   /// gets/sets camera horizontal lookahead offset
-  import static attribute int CameraLookaheadX;
+  import static attribute int CameraLookAheadX;
   
   /// gets/sets camera vertical lookahead offset
-  import static attribute int CameraLookaheadY;
+  import static attribute int CameraLookAheadY;
 };
