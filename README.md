@@ -40,15 +40,44 @@ The character being tracked by the Game.Camera.
 
 ---
 
-##### `static attribute bool EnableParallax`
+#### `static attribute bool EnableParallax`
 
 Gets/sets whether Parallax is on or off.
 
 ---
 
-##### `static attribute bool EnableSmoothCam`
+#### `static attribute bool EnableSmoothCam`
 
 Gets/sets whether Smooth Camera tracking is on or off.
+
+
+---
+
+#### `static attribute int CameraOffsetX`
+
+Gets/sets the camera horizontal offset.
+
+---
+
+#### `static attribute int CameraOffsetY`
+
+Gets/sets the camera vertical offset.
+
+---
+
+#### `static attribute int CameraLookAheadX`
+
+Gets/sets the camera horizontal lookahead offset.
+
+This is an additional offset that is added in the direction the target character is facing (only 4 direction support now).
+
+---
+
+#### `static attribute int CameraLookAheadY`
+
+Gets/sets the camera vertical lookahead offset.
+
+This is an additional offset that is added in the direction the target character is facing (only 4 direction support now).
 
 ---
 
