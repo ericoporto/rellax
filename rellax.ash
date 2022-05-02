@@ -1,5 +1,5 @@
 // Rellax
-// 0.2.0
+// 0.2.1
 // A module to provide smooth scrolling and parallax!
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Before starting, you must create the following Custom Properties
@@ -58,6 +58,9 @@ struct Rellax {
   
   /// gets/sets whether Smooth Camera tracking is on or off.
   import static attribute bool EnableSmoothCam;
+    
+  /// if Smooth Camera is on, gets/sets whether to quickly adjust camera to target on room before fade in.
+  import static attribute bool AdjustCameraOnRoomLoad;
     
   /// gets/sets camera horizontal offset
   import static attribute int CameraOffsetX;

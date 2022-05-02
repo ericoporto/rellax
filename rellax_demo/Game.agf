@@ -668,6 +668,10 @@
             <Number>1</Number>
             <Description IsNull="True" />
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>2</Number>
+            <Description IsNull="True" />
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -6710,7 +6714,7 @@
                 <Name>rellax</Name>
                 <Description>Rellax while the Camera tracks with cool parallax.</Description>
                 <Author>eri0o</Author>
-                <Version>0.2.0</Version>
+                <Version>0.2.1</Version>
                 <Key>1909973127</Key>
                 <IsHeader>False</IsHeader>
               </Script>
