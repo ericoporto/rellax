@@ -38,7 +38,7 @@
       <HandleInvClicksInScript>False</HandleInvClicksInScript>
       <DisplayMultipleInventory>False</DisplayMultipleInventory>
       <ScriptAPIVersion>Highest</ScriptAPIVersion>
-      <ScriptCompatLevel>v350</ScriptCompatLevel>
+      <ScriptCompatLevel>Highest</ScriptCompatLevel>
       <EnforceObjectBasedScript>True</EnforceObjectBasedScript>
       <EnforceNewStrings>True</EnforceNewStrings>
       <EnforceNewAudio>True</EnforceNewAudio>
