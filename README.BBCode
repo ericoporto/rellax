@@ -1,6 +1,6 @@
-[size=14pt][b]rellax[/b][/size] [color=gray][b] version 0.1.4 [/b][/color]
+[size=14pt][b]rellax[/b][/size] [color=gray][b] version 0.2.1[/b][/color]
 
-[url=https://github.com/ericoporto/rellax/releases/download/0.1.4/rellax.scm]Get Latest Release [b]rellax.scm[/b][/url] | [url=https://github.com/ericoporto/rellax]GitHub Repo[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.1.4/rellax_demo_windows.zip]Demo Windows[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.1.4/rellax_demo_linux.tar.xz]Demo Linux[/url] | [url=https://github.com/ericoporto/rellax/archive/master.zip] Download project .zip [/url]
+[url=https://github.com/ericoporto/rellax/releases/download/0.2.1/rellax.scm]Get Latest Release [b]rellax.scm[/b][/url] | [url=https://github.com/ericoporto/rellax]GitHub Repo[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.2.1/rellax_demo_windows.zip]Demo Windows[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.2.1/rellax_demo_linux.tar.gz]Demo Linux[/url] | [url=https://github.com/ericoporto/rellax/archive/master.zip] Download project .zip [/url]
 
 Rellax while the camera tracks with cool parallax
 
@@ -45,6 +45,9 @@ Gets/sets whether Parallax is on or off.
 [b][tt]static attribute bool EnableSmoothCam[/tt][/b]
 Gets/sets whether Smooth Camera tracking is on or off.
 
+[b][tt]static attribute bool AdjustCameraOnRoomLoad[/tt][/b]
+Gets/sets whether to quickly adjust camera to target on room before fade in, when Smooth Camera is on.
+
 [b][tt]static attribute int CameraOffsetX[/tt][/b]
 Gets/sets the camera horizontal offset.
 
@@ -56,6 +59,21 @@ Gets/sets the camera horizontal lookahead offset. This is an additional offset t
 
 [b][tt]static attribute int CameraLookAheadY[/tt][/b]
 Gets/sets the camera vertical lookahead offset. This is an additional offset that is added in the direction the target character is facing (only 4 direction support now).
+
+[b][tt]static attribute int StandstillCameraDelayY[/tt][/b]
+Gets/sets number of frames to wait before adjusting the Y axis quicker after the player is still.
+
+[b][tt]static attribute int CameraLerpFactorX[/tt][/b]
+Gets/sets the factor the camera should use when interpolating in the X axis.
+
+[b][tt]static attribute int CameraLerpFactorY[/tt][/b]
+Gets/sets the factor the camera should use when interpolating in the Y axis.
+
+[b][tt]static attribute int CameraWindowWidth[/tt][/b]
+Gets/sets the camera window width that is centered on the target lookahead point, when the target is outside of the window, the camera moves to keep it inside.
+
+[b][tt]static attribute int CameraWindowHeight[/tt][/b]
+Gets/sets the camera window height that is centered on the target lookahead point, when the target is outside of the window, the camera moves to keep it inside.
 [hr]
 
   [i][b]License[/b][/i]
