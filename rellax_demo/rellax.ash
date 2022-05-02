@@ -1,5 +1,5 @@
 // Rellax
-// 0.1.4
+// 0.2.0
 // A module to provide smooth scrolling and parallax!
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Before starting, you must create the following Custom Properties
@@ -70,4 +70,19 @@ struct Rellax {
   
   /// gets/sets camera vertical lookahead offset
   import static attribute int CameraLookAheadY;
+    
+  /// gets/sets number of frames to wait before adjusting the Y axis quicker after the player is still
+  import static attribute int StandstillCameraDelayY;
+  
+  /// gets/sets the factore the camera should use when interpolating in the X axis
+  import static attribute float CameraLerpFactorX;
+  
+  /// gets/sets the factore the camera should use when interpolating in the Y axis
+  import static attribute float CameraLerpFactorY;
+  
+  /// gets/sets the camera window width that is centered on the player, when the target is outside of the window, the camera moves to keep it inside
+  import static attribute int CameraWindowWidth;
+  
+  /// gets/sets the camera window height that is centered on the player, when the target is outside of the window, the camera moves to keep it inside
+  import static attribute int CameraWindowHeight;
 };
