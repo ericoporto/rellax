@@ -6714,7 +6714,7 @@
                 <Name>rellax</Name>
                 <Description>Rellax while the Camera tracks with cool parallax.</Description>
                 <Author>eri0o</Author>
-                <Version>0.2.1</Version>
+                <Version>0.2.2</Version>
                 <Key>1909973127</Key>
                 <IsHeader>False</IsHeader>
               </Script>
