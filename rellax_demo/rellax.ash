@@ -61,7 +61,10 @@ struct Rellax {
     
   /// if Smooth Camera is on, gets/sets whether to instantly adjust camera to target on room before fade in.
   import static attribute bool AdjustCameraOnRoomLoad;
-    
+  
+  /// gets/sets whether to enhance smoothness when character is following a path.
+  import static attribute bool EnablePathSmoothEnhancement;
+        
   /// gets/sets camera horizontal offset
   import static attribute int CameraOffsetX;
   
