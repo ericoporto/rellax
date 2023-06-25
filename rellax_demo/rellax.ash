@@ -52,7 +52,7 @@
 struct Rellax {
   /// The character being tracked by the Game.Camera.
   import static attribute Character* TargetCharacter;
-  
+    
   /// gets/sets whether Parallax is on or off.
   import static attribute bool EnableParallax;
   
@@ -88,4 +88,7 @@ struct Rellax {
   
   /// gets/sets the camera window height that is centered on the player, when the target is outside of the window, the camera moves to keep it inside
   import static attribute int CameraWindowHeight;
+  
+  /// gets/sets whether Debug overlay is shown is on or off.
+  import static attribute bool DebugShow;
 };
