@@ -49,34 +49,72 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
+
+enum RellaxTweenEasingType {
+  eRellaxEaseLinearTween,
+  eRellaxEaseInSineTween,
+  eRellaxEaseOutSineTween,
+  eRellaxEaseInOutSineTween,
+  eRellaxEaseInQuadTween,
+  eRellaxEaseOutQuadTween,
+  eRellaxEaseInOutQuadTween,
+  eRellaxEaseInCubicTween,
+  eRellaxEaseOutCubicTween,
+  eRellaxEaseInOutCubicTween,
+  eRellaxEaseInQuartTween,
+  eRellaxEaseOutQuartTween,
+  eRellaxEaseInOutQuartTween,
+  eRellaxEaseInQuintTween,
+  eRellaxEaseOutQuintTween,
+  eRellaxEaseInOutQuintTween,
+  eRellaxEaseInCircTween,
+  eRellaxEaseOutCircTween,
+  eRellaxEaseInOutCircTween,
+  eRellaxEaseInExpoTween,
+  eRellaxEaseOutExpoTween,
+  eRellaxEaseInOutExpoTween,
+  eRellaxEaseInBackTween,
+  eRellaxEaseOutBackTween,
+  eRellaxEaseInOutBackTween,
+  eRellaxEaseInElasticTween,
+  eRellaxEaseOutElasticTween,
+  eRellaxEaseInOutElasticTween,
+  eRellaxEaseInBounceTween,
+  eRellaxEaseOutBounceTween,
+  eRellaxEaseInOutBounceTween
+};
+
 struct Rellax {
   /// The character being tracked by the Game.Camera.
   import static attribute Character* TargetCharacter;
-    
+  
+  /// gets/sets the camera tween type to use when the character is stopped
+  import static attribute RellaxTweenEasingType EasingType;
+  
+  /// gets/sets the camera tween duration once the character is stopped
+  import static attribute float TweenDuration;
+
   /// gets/sets whether Parallax is on or off.
   import static attribute bool EnableParallax;
   
   /// gets/sets whether Smooth Camera tracking is on or off.
   import static attribute bool EnableSmoothCam;
-    
+
   /// if Smooth Camera is on, gets/sets whether to instantly adjust camera to target on room before fade in.
   import static attribute bool AdjustCameraOnRoomLoad;
-    
+
   /// gets/sets camera horizontal offset
   import static attribute int CameraOffsetX;
   
   /// gets/sets camera vertical offset
   import static attribute int CameraOffsetY;
-      
+  
   /// gets/sets camera horizontal lookahead offset
   import static attribute int CameraLookAheadX;
   
   /// gets/sets camera vertical lookahead offset
   import static attribute int CameraLookAheadY;
-    
-  /// gets/sets number of frames to wait before adjusting the Y axis quicker after the player is still
-  import static attribute int StandstillCameraDelayY;
-  
+
   /// gets/sets the factore the camera should use when interpolating in the X axis
   import static attribute float CameraLerpFactorX;
   
