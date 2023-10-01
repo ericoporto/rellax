@@ -1,40 +1,42 @@
-[size=14pt][b]rellax[/b][/size] [color=gray][b] version 0.2.1[/b][/color]
+[size=14pt][b]rellax[/b][/size] [color=gray][b]version 0.3.0[/b][/color]
 
-[url=https://github.com/ericoporto/rellax/releases/download/0.2.1/rellax.scm]Get Latest Release [b]rellax.scm[/b][/url] | [url=https://github.com/ericoporto/rellax]GitHub Repo[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.2.1/rellax_demo_windows.zip]Demo Windows[/url] | [url=https://github.com/ericoporto/rellax/releases/download/0.2.1/rellax_demo_linux.tar.gz]Demo Linux[/url] | [url=https://github.com/ericoporto/rellax/archive/master.zip] Download project .zip [/url]
+[url="https://github.com/ericoporto/rellax/releases/download/0.3.0/rellax.scm"]Get Latest Release [b]rellax.scm[/b][/url] | [url="https://github.com/ericoporto/rellax"]GitHub Repo[/url] | [url="https://github.com/ericoporto/rellax/releases/download/0.3.0/rellax_demo_windows.zip"]Demo Windows[/url] | [url="https://github.com/ericoporto/rellax/releases/download/0.3.0/rellax_demo_linux.tar.gz"]Demo Linux[/url] | [url="https://github.com/ericoporto/rellax/archive/master.zip"]Download project .zip [/url]
 
 Rellax while the camera tracks with cool parallax
 
-[url=https://imgur.com/nJGnylM][img width=640 height=360]https://raw.githubusercontent.com/ericoporto/rellax/master/rellax_demo.gif[/img][/url]
+[url="https://imgur.com/nJGnylM"][img width=640 height=360]https://raw.githubusercontent.com/ericoporto/rellax/master/rellax_demo.gif[/img][/url]
 
 [i]This module uses the camera and Viewport API from [b]Adventure Game Studio 3.5.0[/b].[/i]
 
 Demo game uses keyboard arrows control, up arrow jumps. WASD should also work.
 [hr]
 
-  [i][b]Usage[/b][/i]
+[i][b]Usage[/b][/i]
 Before starting, you must create the following Custom Properties in AGS Editor, for usage with Objects.
 Just click on [b][tt]Properties [...][/tt][/b] and on the [b][tt]Edit Custom Properties[/tt][/b] screen, click on [b][tt]Edit Schema ...[/tt][/b] button, and add the two properties below:
 
-  PxPos: [list]
+[size=14pt]PxPos[/size]: 
+[list]
 [li][b][tt]Name[/tt]:[/b] [tt]PxPos[/tt][/li]
 [li][b][tt]Description[/tt]:[/b] [tt]Object's horizontal parallax[/tt][/li]
 [li][b][tt]Type[/tt]:[/b] [tt]Number[/tt][/li]
 [li][b][tt]Default Value[/tt]:[/b] [tt]0[/tt][/li]
 [/list]
 
-  PyPos: [list]
+[size=14pt]PyPos[/size]: 
+[list]
 [li][b][tt]Name[/tt]:[/b] [tt]PyPos[/tt][/li]
 [li][b][tt]Description[/tt]:[/b] [tt]Object's vertical parallax[/tt][/li]
 [li][b][tt]Type[/tt]:[/b] [tt]Number[/tt][/li]
 [li][b][tt]Default Value[/tt]:[/b] [tt]0[/tt][/li]
 [/list]
 
-The number defined on [tt]Px[/tt] or [tt]Py[/tt] will be divided by 100 and used to increase the scrolling. 
+[u]The number defined on [tt]Px[/tt] or [tt]Py[/tt] will be divided by 100 and used to increase the scrolling[/u]. 
 An object with [tt]Px[/tt] and [tt]Py[/tt] 0 is scrolled normally, an object with [tt]Px[/tt] and [tt]Py[/tt] 100 will be fixed on the screen despite camera movement.
 Objects with negative [tt]Px[/tt] and [tt]Py[/tt] are usually at the front, and positive values are usually at the back.
 [hr]
 
-  [i][b]Script API[/b][/i]
+[i][b]Script API[/b][/i]
 
 [b][tt]static attribute Character* TargetCharacter[/tt][/b]
 The character being tracked by the Game.Camera.
@@ -46,22 +48,25 @@ Gets/sets whether Parallax is on or off.
 Gets/sets whether Smooth Camera tracking is on or off.
 
 [b][tt]static attribute bool AdjustCameraOnRoomLoad[/tt][/b]
-Gets/sets whether to quickly adjust camera to target on room before fade in, when Smooth Camera is on.
+Gets/sets whether to instantly adjust camera to target on room before fade in, when Smooth Camera is on. Default is true.
+
+[b][tt]static attribute RellaxTweenEasingType EasingType[/tt][/b]
+gets/sets the camera tween type to use when the character is stopped.
+
+[b][tt]static attribute float TweenDuration[/tt][/b]
+gets/sets the camera tween duration once the character is stopped.
 
 [b][tt]static attribute int CameraOffsetX[/tt][/b]
-Gets/sets the camera horizontal offset.
+Gets/sets the camera horizontal offset. It's applied without smoothing.
 
 [b][tt]static attribute int CameraOffsetY[/tt][/b]
-Gets/sets the camera vertical offset.
+Gets/sets the camera vertical offset. It's applied without smoothing.
 
 [b][tt]static attribute int CameraLookAheadX[/tt][/b]
 Gets/sets the camera horizontal lookahead offset. This is an additional offset that is added in the direction the target character is facing (only 4 direction support now).
 
 [b][tt]static attribute int CameraLookAheadY[/tt][/b]
 Gets/sets the camera vertical lookahead offset. This is an additional offset that is added in the direction the target character is facing (only 4 direction support now).
-
-[b][tt]static attribute int StandstillCameraDelayY[/tt][/b]
-Gets/sets number of frames to wait before adjusting the Y axis quicker after the player is still.
 
 [b][tt]static attribute int CameraLerpFactorX[/tt][/b]
 Gets/sets the factor the camera should use when interpolating in the X axis.
@@ -76,7 +81,7 @@ Gets/sets the camera window width that is centered on the target lookahead point
 Gets/sets the camera window height that is centered on the target lookahead point, when the target is outside of the window, the camera moves to keep it inside.
 [hr]
 
-  [i][b]License[/b][/i]
-This module is created by eri0o is provided with MIT License, see [url=https://github.com/ericoporto/rellax/blob/master/LICENSE]LICENSE[/url] for more details.
+[i][b]License[/b][/i]
+This module is created by eri0o is provided with MIT License, see [url="https://github.com/ericoporto/rellax/blob/master/LICENSE"]LICENSE[/url] for more details.
 The code on this module is based on the code of Smooth Scrolling + Parallax Module from Alasdair Beckett, which bases on code from Steve McCrea.
-The demo game uses CC0 (Public Domain) art provided by [url=https://opengameart.org/users/jetrel]jetrel[/url].
+The demo game uses CC0 (Public Domain) art provided by [url="https://opengameart.org/users/jetrel"]jetrel[/url].
