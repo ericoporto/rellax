@@ -100,10 +100,10 @@ struct Rellax {
   /// gets/sets whether Smooth Camera tracking is on or off.
   import static attribute bool EnableSmoothCam;
 
-  /// if Smooth Camera is on, gets/sets whether to instantly adjust camera to target on room before fade in.
+  /// Gets/sets whether to automatically setup on room load. It defaults to yes (true). Leave as this unless you really need it.
   import static attribute bool AutomaticallySetupOnRoomLoad;
   
-  /// you should not call this, unless AutomaticallySetupOnRoomLoad is false, then call this at the end of your room_Load
+  /// you should not call this, unless AutomaticallySetupOnRoomLoad is false, then call this at the end of your room_Load.
   import static void SetupRoomManually();
 
   /// if Smooth Camera is on, gets/sets whether to instantly adjust camera to target on room before fade in.
