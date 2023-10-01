@@ -47,6 +47,15 @@ Gets/sets whether Parallax is on or off.
 [b][font=Courier New]static attribute bool EnableSmoothCam[/font][/b]
 Gets/sets whether Smooth Camera tracking is on or off.
 
+
+[b][font=Courier New]static attribute bool AutomaticallySetupOnRoomLoad[/font][/b]
+Gets/sets whether to automatically setup on room load. It defaults to yes (true).
+Leave as this unless you really need it.
+
+[b][font=Courier New]static void SetupRoomManually()[/font][/b]
+You should not call this, unless AutomaticallySetupOnRoomLoad is false.
+Then call this at the end of your room_Load, after you are done setting things up.
+
 [b][font=Courier New]static attribute bool AdjustCameraOnRoomLoad[/font][/b]
 Gets/sets whether to instantly adjust camera to target on room before fade in, when Smooth Camera is on. Default is true.
 
