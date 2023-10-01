@@ -103,10 +103,10 @@ struct Rellax {
   /// if Smooth Camera is on, gets/sets whether to instantly adjust camera to target on room before fade in.
   import static attribute bool AdjustCameraOnRoomLoad;
 
-  /// gets/sets camera horizontal offset
+  /// gets/sets camera horizontal offset, it's applied in the next frame as soon as possible
   import static attribute int CameraOffsetX;
   
-  /// gets/sets camera vertical offset
+  /// gets/sets camera vertical offset, it's applied in the next frame as soon as possible
   import static attribute int CameraOffsetY;
   
   /// gets/sets camera horizontal lookahead offset
