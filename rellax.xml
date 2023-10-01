@@ -3,6 +3,6 @@
   <Name>rellax</Name>                      <!-- set the module name -->
   <Description>Rellax while the Camera tracks with cool parallax.</Description> <!-- set the module description -->
   <Author>eri0o</Author>                <!-- set the module author -->
-  <Version>0.3.2</Version>             <!-- set the module version -->
+  <Version>0.3.3</Version>             <!-- set the module version -->
   <Key>1909973127</Key>                  <!-- set the module unique key -->
 </AGSModule>
