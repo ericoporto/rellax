@@ -13,71 +13,71 @@ Demo game uses keyboard arrows control, up arrow jumps. WASD should also work.
 
 [i][b]Usage[/b][/i]
 Before starting, you must create the following Custom Properties in AGS Editor, for usage with Objects.
-Just click on [b][tt]Properties [...][/tt][/b] and on the [b][tt]Edit Custom Properties[/tt][/b] screen, click on [b][tt]Edit Schema ...[/tt][/b] button, and add the two properties below:
+Just click on [b][font=Courier New]Properties [...][/font][/b] and on the [b][font=Courier New]Edit Custom Properties[/font][/b] screen, click on [b][font=Courier New]Edit Schema ...[/font][/b] button, and add the two properties below:
 
 [size=14pt]PxPos[/size]: 
 [list]
-[li][b][tt]Name[/tt]:[/b] [tt]PxPos[/tt][/li]
-[li][b][tt]Description[/tt]:[/b] [tt]Object's horizontal parallax[/tt][/li]
-[li][b][tt]Type[/tt]:[/b] [tt]Number[/tt][/li]
-[li][b][tt]Default Value[/tt]:[/b] [tt]0[/tt][/li]
+[li][b][font=Courier New]Name[/font]:[/b] [font=Courier New]PxPos[/font][/li]
+[li][b][font=Courier New]Description[/font]:[/b] [font=Courier New]Object's horizontal parallax[/font][/li]
+[li][b][font=Courier New]Type[/font]:[/b] [font=Courier New]Number[/font][/li]
+[li][b][font=Courier New]Default Value[/font]:[/b] [font=Courier New]0[/font][/li]
 [/list]
 
 [size=14pt]PyPos[/size]: 
 [list]
-[li][b][tt]Name[/tt]:[/b] [tt]PyPos[/tt][/li]
-[li][b][tt]Description[/tt]:[/b] [tt]Object's vertical parallax[/tt][/li]
-[li][b][tt]Type[/tt]:[/b] [tt]Number[/tt][/li]
-[li][b][tt]Default Value[/tt]:[/b] [tt]0[/tt][/li]
+[li][b][font=Courier New]Name[/font]:[/b] [font=Courier New]PyPos[/font][/li]
+[li][b][font=Courier New]Description[/font]:[/b] [font=Courier New]Object's vertical parallax[/font][/li]
+[li][b][font=Courier New]Type[/font]:[/b] [font=Courier New]Number[/font][/li]
+[li][b][font=Courier New]Default Value[/font]:[/b] [font=Courier New]0[/font][/li]
 [/list]
 
-[u]The number defined on [tt]Px[/tt] or [tt]Py[/tt] will be divided by 100 and used to increase the scrolling[/u]. 
-An object with [tt]Px[/tt] and [tt]Py[/tt] 0 is scrolled normally, an object with [tt]Px[/tt] and [tt]Py[/tt] 100 will be fixed on the screen despite camera movement.
-Objects with negative [tt]Px[/tt] and [tt]Py[/tt] are usually at the front, and positive values are usually at the back.
+[u]The number defined on [font=Courier New]Px[/font] or [font=Courier New]Py[/font] will be divided by 100 and used to increase the scrolling[/u]. 
+An object with [font=Courier New]Px[/font] and [font=Courier New]Py[/font] 0 is scrolled normally, an object with [font=Courier New]Px[/font] and [font=Courier New]Py[/font] 100 will be fixed on the screen despite camera movement.
+Objects with negative [font=Courier New]Px[/font] and [font=Courier New]Py[/font] are usually at the front, and positive values are usually at the back.
 [hr]
 
 [i][b]Script API[/b][/i]
 
-[b][tt]static attribute Character* TargetCharacter[/tt][/b]
+[b][font=Courier New]static attribute Character* TargetCharacter[/font][/b]
 The character being tracked by the Game.Camera.
 
-[b][tt]static attribute bool EnableParallax[/tt][/b]
+[b][font=Courier New]static attribute bool EnableParallax[/font][/b]
 Gets/sets whether Parallax is on or off.
 
-[b][tt]static attribute bool EnableSmoothCam[/tt][/b]
+[b][font=Courier New]static attribute bool EnableSmoothCam[/font][/b]
 Gets/sets whether Smooth Camera tracking is on or off.
 
-[b][tt]static attribute bool AdjustCameraOnRoomLoad[/tt][/b]
+[b][font=Courier New]static attribute bool AdjustCameraOnRoomLoad[/font][/b]
 Gets/sets whether to instantly adjust camera to target on room before fade in, when Smooth Camera is on. Default is true.
 
-[b][tt]static attribute RellaxTweenEasingType EasingType[/tt][/b]
+[b][font=Courier New]static attribute RellaxTweenEasingType EasingType[/font][/b]
 gets/sets the camera tween type to use when the character is stopped.
 
-[b][tt]static attribute float TweenDuration[/tt][/b]
+[b][font=Courier New]static attribute float TweenDuration[/font][/b]
 gets/sets the camera tween duration once the character is stopped.
 
-[b][tt]static attribute int CameraOffsetX[/tt][/b]
+[b][font=Courier New]static attribute int CameraOffsetX[/font][/b]
 Gets/sets the camera horizontal offset. It's applied without smoothing.
 
-[b][tt]static attribute int CameraOffsetY[/tt][/b]
+[b][font=Courier New]static attribute int CameraOffsetY[/font][/b]
 Gets/sets the camera vertical offset. It's applied without smoothing.
 
-[b][tt]static attribute int CameraLookAheadX[/tt][/b]
+[b][font=Courier New]static attribute int CameraLookAheadX[/font][/b]
 Gets/sets the camera horizontal lookahead offset. This is an additional offset that is added in the direction the target character is facing (only 4 direction support now).
 
-[b][tt]static attribute int CameraLookAheadY[/tt][/b]
+[b][font=Courier New]static attribute int CameraLookAheadY[/font][/b]
 Gets/sets the camera vertical lookahead offset. This is an additional offset that is added in the direction the target character is facing (only 4 direction support now).
 
-[b][tt]static attribute int CameraLerpFactorX[/tt][/b]
+[b][font=Courier New]static attribute int CameraLerpFactorX[/font][/b]
 Gets/sets the factor the camera should use when interpolating in the X axis.
 
-[b][tt]static attribute int CameraLerpFactorY[/tt][/b]
+[b][font=Courier New]static attribute int CameraLerpFactorY[/font][/b]
 Gets/sets the factor the camera should use when interpolating in the Y axis.
 
-[b][tt]static attribute int CameraWindowWidth[/tt][/b]
+[b][font=Courier New]static attribute int CameraWindowWidth[/font][/b]
 Gets/sets the camera window width that is centered on the target lookahead point, when the target is outside of the window, the camera moves to keep it inside.
 
-[b][tt]static attribute int CameraWindowHeight[/tt][/b]
+[b][font=Courier New]static attribute int CameraWindowHeight[/font][/b]
 Gets/sets the camera window height that is centered on the target lookahead point, when the target is outside of the window, the camera moves to keep it inside.
 [hr]
 
