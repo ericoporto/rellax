@@ -1,4 +1,7 @@
 # rellax
+
+[![build-and-test-windows](https://github.com/ericoporto/rellax/actions/workflows/main.yml/badge.svg)](https://github.com/ericoporto/rellax/actions)
+
 Rellax while the Camera tracks with cool parallax
 
 [<img src="https://raw.githubusercontent.com/ericoporto/rellax/master/rellax_demo.gif" alt="rellax demo" width="640px" height="360px">](https://imgur.com/nJGnylM)
