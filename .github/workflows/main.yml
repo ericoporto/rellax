@@ -1,0 +1,56 @@
+name: CI
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build-and-test-windows:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: gets ags-toolbox
+        run: |
+          curl -Lo atbx.exe https://github.com/ericoporto/agstoolbox/releases/download/0.4.9/atbx.exe
+          echo "${{github.workspace}}" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
+      - name: Install AGS
+        run: |
+          atbx install editor -q rellax_demo/
+
+      - name: Build game
+        run: |
+          atbx build rellax_demo/
+
+      - name: Export module
+        run: |
+          atbx export script rellax_demo/ rellax .
+
+      - name: Zip Game Project
+        run: |
+          Remove-Item -Recurse -Force rellax_demo/Compiled/Data
+          Remove-Item -Force rellax_demo/Game.agf.user
+          Compress-Archive -Path rellax_demo/* -Destination rellax_demo_windows.zip
+
+      - name: Upload Game and Project Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rellax_demo
+          path: |
+            rellax_demo_windows.zip
+
+      - name: Upload Module Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rellax_module
+          path: |
+            rellax.scm
+
+      - name: Create release and upload assets
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: rellax.scm,rellax_demo_windows.zip
+          allowUpdates: true
+          omitBodyDuringUpdate: true
+          token: ${{ secrets.GITHUB_TOKEN }}
